@@ -34,10 +34,9 @@ $(document).ready(function () {
     ]
     const excTemp = $('.exchange__wrapper .exchange__col .row');
     const excInp = $('.exchange__calc-inp input');
-    const excImg = $('.exchange__icon img');
     const excResult = $('.exchange__result p');
     const selectedValue = $('.exchange__select');
-    
+
     $.ajax({
         url: `${API_URL}/latest?base=TRY&symbols=USD,TRY,EUR,JPY,GBP,DKK,NOK`,
         type: 'GET',
@@ -54,15 +53,13 @@ $(document).ready(function () {
         if (excInp.val()) convertAmount();
     })
 
-    excImg.click(function() {
-        convertAmount();
-    })
-    excInp.keydown(function(e){
-        e.keyCode === 13 ? convertAmount() : false;
+    excInp.keyup(function(e){
+        convertAmount(e.target.value);
     })
 
     renderExchange = (exc) => {
         excData.map((exchange) => {
+            exchange.rate = exc[exchange.name];
             excTemp.append(`
             <div class="exchange__item-col">
                 <div class="exchange__item d-flex justify-content-between">
@@ -94,15 +91,8 @@ $(document).ready(function () {
         })
     }
 
-    convertAmount = () => {
-        $.ajax({
-            url: `${API_URL}/convert?from=${selectedValue.val()}&to=TRY`,
-            type: 'GET',
-            dataType: 'json',
-            success: (res) => {
-                let value = excInp.val();
-                excResult.text((res.result * Number(value)).toFixed(2));
-            }
-        });
+    convertAmount = (val = excInp.val()) => {
+        const data = excData.filter((item) => item.name === selectedValue.val())
+        excResult.text(((1 / data[0].rate) * Number(val)).toFixed(2));
     }
 })
