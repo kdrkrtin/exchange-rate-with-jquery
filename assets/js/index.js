@@ -49,18 +49,12 @@ $(document).ready(function () {
     // FUNCTIONS
 
 
-    selectedValue.change(function () {
+    selectedValue.change(function(){
         if (excInp.val()) convertAmount();
     })
 
-    excInp.keyup(function (e) {
-        let val = e.target.value;
-        if (isNaN(val)) {
-            val = val.replace(/[^0-9\.]/g, '');
-            if (val.split('.').length > 2)
-                val = val.replace(/\.+$/, "");
-        }
-        convertAmount(val);
+    excInp.keyup(function(e){
+        convertAmount(e.target.value);
     })
 
     renderExchange = (exc) => {
@@ -81,11 +75,11 @@ $(document).ready(function () {
                     <div class="exchange__right">
                         <div class="exchage__right-wrapper d-flex">
                             <div class="exchange__buying text-end">
-                                <p>ALIŞ</p>
+                                <p>Alış</p>
                                 <span>${(1 / exc[exchange.name]).toFixed(4)}</span>
                             </div>
                             <div class="exchange__sales text-end">
-                                <p>SATIŞ</p>
+                                <p>Satış</p>
                                 <span>${(1 / exc[exchange.name]).toFixed(4)}</span>
                             </div>
                         </div>
@@ -98,10 +92,7 @@ $(document).ready(function () {
     }
 
     convertAmount = (val = excInp.val()) => {
-        excInp.val(val.replace(/\B(?=(\d{3})+(?!\d))/g, ","))
         const data = excData.filter((item) => item.name === selectedValue.val())
-        excResult.text(((1 / data[0].rate) * Number(val)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        excResult.text(((1 / data[0].rate) * Number(val)).toFixed(2));
     }
 })
-
-
