@@ -6,7 +6,7 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 .exchange {
-  padding: 31px 165px 79px; }
+  padding: 31px 164px 79px; }
   .exchange__title h1 {
     font-size: 28px;
     font-weight: bold;
@@ -19,13 +19,13 @@ body {
     padding: 0;
     max-width: calc(100% - 255px); }
     .exchange__col hr {
-      margin: 24px 0 29px 0;
+      margin: 24px 0 29px 0px;
       opacity: 0.3;
       border-color: #bac9d5; }
   .exchange__item-col {
     width: 351px;
     margin-right: 75px;
-    padding: 0; }
+    padding: 0 1px; }
   .exchange__item-col:nth-child(5) hr, .exchange__item-col:nth-child(6) hr {
     display: none; }
   .exchange__calc {
@@ -141,14 +141,14 @@ body {
   .exchange__buttons {
     margin-top: 43px; }
     .exchange__buttons .detail button {
-      width: 350px;
+      width: 351px;
       height: 48px;
       background-color: #2b3b48;
       margin-right: 75px;
       color: #fff;
       border: 2px solid #2b3b48; }
     .exchange__buttons .all button {
-      width: 350px;
+      width: 351px;
       height: 48px;
       border: solid 2px #4f6477;
       background-color: #fff; }
@@ -181,7 +181,8 @@ body {
     max-width: 345px;
     margin: auto; }
   .exchange__item-col {
-    width: 100%; }
+    width: 100%;
+    padding: 0 5px 0 1px; }
   .exchange__calc {
     width: 100%;
     margin-top: 32px; }

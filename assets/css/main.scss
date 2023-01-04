@@ -8,7 +8,7 @@ body {
 }
 
 .exchange {
-    padding: 31px 165px 79px;
+    padding: 31px 164px 79px;
     & {
         &__title {
             h1 {
@@ -26,7 +26,7 @@ body {
             padding: 0;
             max-width: calc(100% - 255px);
             hr {
-                margin: 24px 0 29px 0;
+                margin: 24px 0 29px 0px;
                 opacity: 0.3;
                 border-color: #bac9d5;
             }
@@ -34,7 +34,7 @@ body {
         &__item-col {
             width: 351px;
             margin-right: 75px;
-            padding: 0;
+            padding: 0 1px;
         }
         &__item-col:nth-child(5),
         &__item-col:nth-child(6) {
@@ -182,7 +182,7 @@ body {
             margin-top: 43px;
             .detail {
                 button {
-                    width: 350px;
+                    width: 351px;
                     height: 48px;
                     background-color: #2b3b48;
                     margin-right: 75px;
@@ -192,7 +192,7 @@ body {
             }
             .all {
                 button {
-                    width: 350px;
+                    width: 351px;
                     height: 48px;
                     border: solid 2px #4f6477;
                     background-color: #fff;
@@ -256,6 +256,7 @@ body {
         }
         &__item-col {
             width: 100%;
+            padding: 0 5px 0 1px;
         }
         &__calc {
             width: 100%;
