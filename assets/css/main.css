@@ -2,6 +2,9 @@ body {
   padding: 0;
   margin: 0; }
 
+* {
+  font-family: 'Roboto', sans-serif; }
+
 .exchange {
   padding: 31px 165px 79px; }
   .exchange__title h1 {
@@ -138,14 +141,14 @@ body {
   .exchange__buttons {
     margin-top: 43px; }
     .exchange__buttons .detail button {
-      width: 351px;
+      width: 350px;
       height: 48px;
       background-color: #2b3b48;
       margin-right: 75px;
       color: #fff;
       border: 2px solid #2b3b48; }
     .exchange__buttons .all button {
-      width: 351px;
+      width: 350px;
       height: 48px;
       border: solid 2px #4f6477;
       background-color: #fff; }
@@ -160,7 +163,7 @@ body {
     flex-direction: column; }
     .exchange__buttons .all button,
     .exchange__buttons .detail button {
-      width: 451px; }
+      width: 450px; }
     .exchange__buttons .all {
       margin-top: 10px; } }
 @media screen and (max-width: 1024px) {
@@ -216,11 +219,11 @@ body {
     width: 451px;
     margin-right: 0; }
   .exchange__buttons .detail button {
-    width: 451px; }
+    width: 450px; }
   .exchange__buttons .all {
     margin-top: 10px; }
     .exchange__buttons .all button {
-      width: 451px; } }
+      width: 450px; } }
 @media only screen and (orientation: landscape) and (max-width: 740px) {
   .exchange__col {
     max-width: 100%; }

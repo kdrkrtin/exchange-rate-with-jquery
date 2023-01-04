@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 .exchange {
     padding: 31px 165px 79px;
     & {
@@ -178,7 +182,7 @@ body {
             margin-top: 43px;
             .detail {
                 button {
-                    width: 351px;
+                    width: 350px;
                     height: 48px;
                     background-color: #2b3b48;
                     margin-right: 75px;
@@ -188,7 +192,7 @@ body {
             }
             .all {
                 button {
-                    width: 351px;
+                    width: 350px;
                     height: 48px;
                     border: solid 2px #4f6477;
                     background-color: #fff;
@@ -216,7 +220,7 @@ body {
             .all,
             .detail {
                 button {
-                    width: 451px;
+                    width: 450px;
                 }
             }
             .all {
@@ -316,13 +320,13 @@ body {
         &__buttons {
             .detail {
                 button {
-                    width: 451px;
+                    width: 450px;
                 }
             }
             .all {
                 margin-top: 10px;
                 button {
-                    width: 451px;
+                    width: 450px;
                 }
             }
         }
