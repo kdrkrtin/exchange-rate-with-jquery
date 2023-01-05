@@ -4,7 +4,7 @@ body {
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .exchange {
@@ -14,7 +14,10 @@ body {
             h1 {
                 font-size: 28px;
                 font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
                 line-height: 1.21;
+                letter-spacing: normal;
                 color: #2b3b48;
                 margin-bottom: 42.8px;
             }
@@ -155,7 +158,8 @@ body {
         }
         &__buying,
         &__sales {
-            p, span{
+            p,
+            span {
                 font-stretch: normal;
                 font-style: normal;
                 letter-spacing: normal;
@@ -232,6 +236,16 @@ body {
 
 @media screen and (max-width: 1024px) {
     .exchange {
+        &__title {
+            h1 {
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 2.45;
+                letter-spacing: -0.49px;
+                color: #2b3b48;
+                margin-bottom: 17px;
+            }
+        }
         & {
             padding: 9px 15px 27px;
         }
@@ -278,6 +292,7 @@ body {
                 button {
                     margin-right: 0;
                     width: 100%;
+                    padding: 0 125px 0 127px;
                 }
             }
             .all {
@@ -287,6 +302,7 @@ body {
                     border: none;
                     width: 100%;
                     height: 32px;
+                    padding: 0 91px 0 102px;
                 }
             }
         }
@@ -304,10 +320,39 @@ body {
     }
 }
 
+@media screen and (max-width: 360px) {
+    .exchange {
+        &__buttons {
+            .detail{
+                button{
+                    padding: 0 115px 0 117px;
+                }
+            }
+            .all{
+                button{
+                    padding: 0 81px 0 92px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 280px) {
     .exchange {
         &__sales {
             margin-left: 5px;
+        }
+        &__buttons {
+            .detail{
+                button{
+                    padding: 0 75px;
+                }
+            }
+            .all{
+                button{
+                    padding: 0 42px;
+                }
+            }
         }
     }
 }
