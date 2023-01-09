@@ -55,11 +55,6 @@ $(document).ready(function () {
 
     excInp.keyup(function (e) {
         let val = e.target.value;
-        if (isNaN(val)) {
-            val = val.replace(/[^0-9\.]/g, '');
-            if (val.split('.').length > 2)
-                val = val.replace(/\.+$/, "");
-        }
         convertAmount(val);
     })
 
@@ -98,6 +93,11 @@ $(document).ready(function () {
     }
 
     convertAmount = (val = excInp.val()) => {
+        if (isNaN(val)) {
+            val = val.replace(/[^0-9\.]/g, '');
+            if (val.split('.').length > 2)
+                val = val.replace(/\.+$/, "");
+        }
         excInp.val(val.replace(/\B(?=(\d{3})+(?!\d))/g, ","))
         const data = excData.filter((item) => item.name === selectedValue.val())
         excResult.text(((1 / data[0].rate) * Number(val)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
